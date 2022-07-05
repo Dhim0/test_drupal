@@ -1,15 +1,15 @@
-uuid: 229bdae1-eaf5-4f00-9e32-f934c15d6c14
+uuid: 9306a271-c6cc-4cc7-a88f-26cc6bc3c3e7
 langcode: fr
 status: true
 dependencies:
   module:
     - system
   theme:
-    - seven
+    - test_drupal
 _core:
-  default_config_hash: YRY68JWkaUiGeZlWMv1nzeIgDm0ZZwXYgpqUpLFzwAY
-id: seven_content
-theme: seven
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: test_drupal_content
+theme: test_drupal
 region: content
 weight: 0
 provider: null
@@ -17,6 +17,6 @@ plugin: system_main_block
 settings:
   id: system_main_block
   label: 'Contenu de la page principale'
-  provider: system
   label_display: '0'
+  provider: system
 visibility: {  }

@@ -1,15 +1,15 @@
-uuid: ec05e764-6e4a-484a-9a78-9c598cf79806
+uuid: 61dc9a38-9b40-47f4-ae43-fd59a7a8fd3c
 langcode: fr
 status: true
 dependencies:
   module:
     - search
   theme:
-    - bartik
+    - test_drupal
 _core:
   default_config_hash: Q-4EcGAsu26ICu4ejEz0uE1zv4akpiaOsizxgZfAmEw
-id: bartik_search
-theme: bartik
+id: test_drupal_search
+theme: test_drupal
 region: sidebar_first
 weight: -1
 provider: null
@@ -17,7 +17,7 @@ plugin: search_form_block
 settings:
   id: search_form_block
   label: Search
-  provider: search
   label_display: visible
+  provider: search
   page_id: node_search
 visibility: {  }

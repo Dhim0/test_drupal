@@ -1,13 +1,13 @@
-uuid: 657b6861-38ee-4ea4-9357-9d66177de363
+uuid: 968ebd91-b244-4b45-bb96-56d984e01228
 langcode: fr
 status: true
 dependencies:
   theme:
-    - bartik
+    - test_drupal
 _core:
   default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
-id: bartik_local_tasks
-theme: bartik
+id: test_drupal_local_tasks
+theme: test_drupal
 region: content
 weight: -40
 provider: null
@@ -15,8 +15,8 @@ plugin: local_tasks_block
 settings:
   id: local_tasks_block
   label: Onglets
-  provider: core
   label_display: '0'
+  provider: core
   primary: true
   secondary: true
 visibility: {  }
