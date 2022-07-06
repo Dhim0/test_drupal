@@ -1,0 +1,33 @@
+
+.block-related-event-block h3 {
+  cursor: pointer;
+}
+
+.block-related-event-block .event-link {
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  width: 40%;
+  height: 10%;
+  background-color: #000;
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.8;
+  -khtml-opacity: 0.8;
+  opacity: 0.8;
+  z-index: 10000;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.block-related-event-block .event-link a {
+  color: white;
+}
+
+.block-related-event-block .event-link svg {
+  color: white;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+}

@@ -19,6 +19,7 @@ module:
   devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
+  event: 0
   field: 0
   field_ui: 0
   file: 0
@@ -44,6 +45,7 @@ module:
   text: 0
   toolbar: 0
   tour: 0
+  twig_tweak: 0
   update: 0
   user: 0
   views_ui: 0
@@ -55,4 +57,5 @@ theme:
   classy: 0
   test_drupal: 0
   claro: 0
+  bootstrap_barrio: 0
 profile: standard

@@ -4,7 +4,7 @@ description: 'An empty theme with classy as base. Feel free to change its base t
 core_version_requirement: ^8 || ^9
 libraries:
   - test_drupal/main
-base theme: classy
+base theme: bootstrap_barrio
 regions:
   header: Header
   content: Content
