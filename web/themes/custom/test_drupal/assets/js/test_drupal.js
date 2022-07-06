@@ -21,8 +21,8 @@
     },
     manageOverlay: function () {
       let content = $('.block-related-event-block .event-link');
-      content.hide();
-      $(".block-related-event-block h3").click(function(){
+
+      $(".block-related-event-block h3.linked").click(function(){
         content.show();
       });
       $(".block-related-event-block .event-link svg").click(function(){

@@ -68,13 +68,16 @@ use Drupal\Core\Entity\EntityTypeManager;
    */
   public function build() {
     $currentNode = $this->currentRouteMatch->getParameter('node');
-    $taxoTermId = $currentNode->get('field_event_type')->getValue()[0]["target_id"];
-    $relatedNodes = $this->entityTypeManager->getStorage('node')->loadByProperties([
+    $taxoTermId = ($currentNode) ? $currentNode->get('field_event_type')->getValue()[0]["target_id"] : null;
+    $relatedNodes = ($taxoTermId) ? $this->entityTypeManager->getStorage('node')->loadByProperties([
       'field_event_type' => $taxoTermId,
-    ]);
-    unset($relatedNodes[$currentNode->id()]);
+    ]) : null;
 
-    if (!empty($relatedNodes)) {
+    if ($relatedNodes) {
+      unset($relatedNodes[$currentNode->id()]);
+    }
+
+    if ($relatedNodes && !empty($relatedNodes)) {
       $firstNodeFound = $relatedNodes[array_rand($relatedNodes, 1)];
       $found = true;
       $event_title = $firstNodeFound->get('title')->getValue()[0]["value"];

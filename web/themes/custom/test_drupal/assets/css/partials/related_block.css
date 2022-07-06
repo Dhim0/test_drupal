@@ -1,9 +1,11 @@
 
-.block-related-event-block h3 {
+.block-related-event-block h3.linked {
   cursor: pointer;
+  color: -webkit-link;
 }
 
 .block-related-event-block .event-link {
+  display: none;
   position: fixed;
   top: 30%;
   left: 30%;

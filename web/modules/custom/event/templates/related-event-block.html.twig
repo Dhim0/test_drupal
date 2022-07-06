@@ -1,6 +1,6 @@
-<div{{ attributes }}>
-  {% if found %}
-    <h3>
+{% if found %}
+  <div{{ attributes }}>
+    <h3 class="linked">
       {{ 'Évènement lié'|t }}
     </h3>
     <div class="event-link">
@@ -9,9 +9,5 @@
        </svg>
       <a href="{{ event_path }}">{{ event_title }}</a>
     </div>
-  {% else %}
-  <h3>
-    {{ 'Aucun évènement lié.'|t }}
-  </h3>
-  {% endif %}
-</div>
+  </div>
+{% endif %}
