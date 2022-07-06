@@ -19,3 +19,30 @@ function event_theme($existing, $type, $theme, $path): array {
     ],
   ];
 }
+
+/**
+ * Implements hook_cron().
+ */
+function event_cron() {
+  $queue = \Drupal::queue('event_unpublish_queue');
+  $nids = \Drupal::entityQuery('node')->condition('type','event')->execute();
+  $nodes =  \Drupal\node\Entity\Node::loadMultiple($nids);
+  $unpublish = [];
+
+  foreach ($nodes as $node) {
+    $end_date = $node->get('field_date_end')->getValue();
+
+    if (!empty($end_date)) {
+      $node_timestamp = strtotime($end_date[0]["value"]);
+      $current_timestamp = time();
+
+      if ($current_timestamp > $node_timestamp) {
+        $unpublish[] = $node->id();
+      }
+    }
+  }
+  if (!empty($unpublish)) {
+    // Create item to queue.
+    $queue->createItem($unpublish);
+  }
+}
